@@ -1,4 +1,4 @@
-<p><i><%= current_user %></i></p>
+<p><i><%= current_user.email %> - <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></i></p>
 
 <h1>Testing Open Food Facts API ;)</h1>
 

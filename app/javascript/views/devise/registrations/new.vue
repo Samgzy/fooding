@@ -14,7 +14,7 @@
    data: function() {
       return ({
         user: {
-          name: '',
+          // name: '',
           email: '',
           password: ''
         },
@@ -51,10 +51,10 @@
               <!-- call csrf to use hidden fields -->
               <csrf></csrf>
 
-              <el-form-item label="Name" prop="name" required>
+              <!-- <el-form-item label="Name" prop="name" required>
                 <el-input name="user[name]" v-model="user.name" >
                 </el-input>
-              </el-form-item>
+              </el-form-item> -->
 
               <el-form-item label="Email" prop="email" required>
                 <el-input name="user[email]" v-model="user.email" type="email">
