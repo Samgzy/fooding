@@ -16,7 +16,8 @@
         user: {
           // name: '',
           email: '',
-          password: ''
+          password: '',
+          password_confirmation: ''
         },
         // validation rules
         rules: {
@@ -63,6 +64,11 @@
 
               <el-form-item label="Password" prop="password" required>
                 <el-input v-model="user.password" name="user[password]" type="password">
+                </el-input>
+              </el-form-item>
+
+              <el-form-item label="Password confirmation" prop="password_confirmation" required>
+                <el-input v-model="user.password_confirmation" name="user[password_confirmation]" type="password">
                 </el-input>
               </el-form-item>
 
