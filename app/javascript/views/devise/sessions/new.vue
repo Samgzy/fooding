@@ -14,15 +14,8 @@
    data: function() {
       return ({
         user: {
-          name: '',
           email: '',
           password: ''
-        },
-        // validation rules
-        rules: {
-          email: [
-            {type: 'email', trigger: 'blur,change'}
-          ]
         }
       });
     }
@@ -44,17 +37,12 @@
         <el-col :xs="24" :sm="12">
           <el-card class="box-card" style="width: 100%">
             <div slot="header" class="clearfix">
-              <h3>Signup</h3>
+              <h3>Log in</h3>
             </div>
             <!-- form for the sign up -->
-            <el-form :model="user" :rules="rules" label-position="top" method="post" action="/users">
+            <el-form :model="user" label-position="top" method="post" action="/users/sign_in">
               <!-- call csrf to use hidden fields -->
               <csrf></csrf>
-
-              <el-form-item label="Name" prop="name" required>
-                <el-input name="user[name]" v-model="user.name" >
-                </el-input>
-              </el-form-item>
 
               <el-form-item label="Email" prop="email" required>
                 <el-input name="user[email]" v-model="user.email" type="email">
@@ -68,14 +56,14 @@
 
               <el-form-item>
                 <el-button native-type="submit" type="primary" class="m-t-10">
-                  Create
+                  Log in
                 </el-button>
               </el-form-item>
             </el-form>
 
-            <a href="/users/sign_in">
+            <a href="/users/sign_up">
               <el-button type="text" style="margin-left: 10px">
-                Sign In
+                Sign Up
               </el-button>
             </a>
 
